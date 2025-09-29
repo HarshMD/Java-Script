@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    WAP to calculate electricity bill:
+    Accept unit consumed:
+    a. if unit consumed is less than or equal to 100 -> then charge amount 5/unit
+    b. if unit consumed is between 101 to 200 -> then charge amount 8/unit
+    c. if unit consumed is more than 200 -> then charge amount 15/unit
+
+    After bill_amount add fixed amount of 150Rs
+    Display Final Amount and Unit Consumed
+
+    -->
+    <script>
+        let unitConsumed = parseInt(prompt("Number of units consumed"));
+        let bill_amt, fixed_amt = 150;
+        if(unitConsumed<=100){
+            bill_amt = unitConsumed * 5;
+            console.log(`Charges for ${unitConsumed} is ${bill_amt + fixed_amt}`);
+        }
+        else if (unitConsumed>=101 && unitConsumed<=200){
+            bill_amt = unitConsumed * 8;
+            console.log(`Charges for ${unitConsumed} plus ${fixed_amt} fixed amount is ${bill_amt + fixed_amt}`);
+        }
+        else{
+            bill_amt = unitConsumed * 15;
+            console.log(`Charges for ${unitConsumed} is ${bill_amt + fixed_amt}`);
+        }
+    </script>
+</body>
+</html>

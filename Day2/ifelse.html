@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task Given</h1>
+    <!-- 
+    1. WAP to accept 2 numbers from user and check if their last digit is same or not
+    n1 = 563, n2 = 16893
+    last_digit = 3 -> in both so last digit of 563 and 16893 is same
+    -->
+    <script>
+        let num1 = prompt("Enter the value of number 1: ");
+        let num2 = prompt("Enter the value of number 2: ");
+
+        if(num1[num1.length - 1] == num2[num2.length - 1]){
+            console.log(`Last digit of both numbers are same`);
+        }
+        else{
+            console.log(`Last digit of both numbers are not same`);
+        }
+    </script>
+</body>
+</html>
