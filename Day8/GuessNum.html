@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+    let random = Math.floor(Math.random() * 100) + 1;
+
+    for(let i = 0; i<=10; i++){
+        let guess = prompt("Guess the number: ");
+        if(guess<random){
+            console.log("The number is higher than guessed number"); 
+        }
+        else if(guess>random){
+            console.log("The number is lower than guessed number");
+        }
+        else if(guess == random){
+            console.log("You guessed right and the number was: ", random);
+            break;
+        }
+        else{
+            console.log("Invalid number");
+            break;
+        }
+    }
+    console.log(random);
+    </script>
+</body>
+</html>

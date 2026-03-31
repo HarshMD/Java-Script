@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+
+    <!-- Font Awesome for sun/moon icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <aside class="card">
+            <header>
+                <div>
+                    <h1>Weather App</h1>
+                    <div class="subtitle">Get Forecast..</div>
+                </div>
+                <div class="theme-toggle" aria-hidden="true" id="themeToggleWrap" title="Toggle theme">
+                    <i class="fa-solid fa-sun icon" id="sunIcon" aria-hidden="true" style="display:none"></i>
+                    <i class="fa-solid fa-moon icon" id="moonIcon" aria-hidden="true" style="display:none"></i>
+                    <span class="toggle-label" id="toggleLabel"></span>
+                </div>
+            </header>
+
+            <form id="weatherForm">
+                <div style="margin-bottom:12px">
+                    <label for="city">City name</label>
+                    <input id="city" name="city" type="text" placeholder="e.g. Mumbai or Paris,FR">
+                    <div id="cityError" class="error">City name is required</div>
+                </div>
+
+                <div style="margin-bottom:12px">
+                    <label for="days">Forecast days</label>
+                    <select id="days" name="days">
+                        <option value="">Select days</option>
+                    </select>
+                    <div id="daysError" class="error">Please select days</div>
+                </div>
+
+                <div class="controls">
+                    <button id="getWeatherBtn" class="btn-primary" type="submit">Get Weather</button>
+                    <button id="currentLocationBtn" class="btn-ghost" type="button">Current Location</button>
+                </div>
+
+                <div style="margin-top:12px" class="small">Tip: type <code>city,country</code> to disambiguate (e.g.
+                    <code>India,Delhi</code>).
+                </div>
+            </form>
+        </aside>
+
+        <main id="weather" class="card">
+            <div id="rightContent">
+                <div class="empty-state" id="emptyState">Search for a city to see weather</div>
+                <div id="loader" class="loader" style="display:none;margin-top:16px"></div>
+                <div id="dataContainer"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
